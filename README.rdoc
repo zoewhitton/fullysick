@@ -1,6 +1,6 @@
 == README
 
-Hello - welcome to this app! I would like a cat.
+Hello - welcome to this app! I would like a cat. A really nice one. Mew mew mew!
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
