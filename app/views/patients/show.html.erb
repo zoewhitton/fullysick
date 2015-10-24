@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel">
+      <div class="row">
+          <div class="col-md-12 col-md-offset-0 show-box">
+            <h2><%= @patient.full_name %></h2>
+          </div>
+      </div>
+      <div class="row">
+
+        <div class="col-md-5 col-md-offset-0 show-box">
+          <h4>Details</h4>
+          <p>
+            <strong>Phone</strong>
+            <%= @patient.phone %>
+          </p>
+          <p>
+            <strong>Medicare number</strong>
+            <%= @patient.medicare_number %>
+          </p>
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 show-box">
+          <h4>Address</h4>
+          <p>
+            <strong>Street address</strong>
+            <%= @patient.street_address %>
+          </p>
+          <p>
+            <strong>Suburb</strong>
+            <%= @patient.suburb %>
+          </p>
+          <p>
+            <strong>State</strong>
+            <%= @patient.state %>
+          </p>
+          <p>
+            <strong>Postcode</strong>
+            <%= @patient.postcode %>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 col-md-offset-0 show-box">
+          <%= link_to 'Edit', edit_patient_path(@patient), class: "btn btn-warning" %>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

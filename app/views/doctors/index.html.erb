@@ -1,0 +1,47 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <br>
+  <h1>We've got a fully sick doctor for all your needs</h1>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <% Doctor.tag_counts_on(:tags).each do |tag| %>
+        <%= link_to (tag.name + 's (' + tag.count.to_s + ')' ), doctors_path(tag: tag.name), class: 'btn btn-info btn-sm' %>
+      <% end %>
+      <%= link_to 'All doctors', doctors_path, class: 'btn btn-primary btn-sm'  %>
+    </div>
+  </div>
+
+  <div class="row">
+    <% @doctors.each do |doctor| %>
+      <div class="col-md-3 doctor-view">
+        <div class="row">
+          <div class="col-md-12 doctor-image">
+            <img class="img-responsive doctor-image-file" src="<%= asset_path doctor.photo %>">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p><strong><%= doctor.title %> <%= doctor.first_name %> <%= doctor.last_name %>, <%= doctor.post_nominals %></strong></p>
+            <div class="doctor-bio"><%= doctor.bio %></div>
+            <p>
+              <% doctor.tags.each do |tag| %>
+                <%= link_to tag.name, doctors_path(tag: tag.name) %>  |
+              <% end %>
+            </p>
+            <p>
+                <%= link_to 'Edit', edit_doctor_path(doctor), class: "btn-sm btn-primary" %>
+                <%= link_to 'Show', doctor_path(doctor), class: "btn-sm btn-primary" %>
+                <%= link_to 'Destroy', doctor, method: :delete, class: "btn-sm btn-danger", data: { confirm: 'Are you sure?' } %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <%= will_paginate @doctors, class: "flickr_pagination" %>
+  <br>
+  <br>
+  <br>
+</div>

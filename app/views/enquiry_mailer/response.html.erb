@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>EnquiryMailer Response</h1>
+
+    <p>
+      Hi <% @enquiry.name %>. your enquiry has been received. One of our friendly team will be back to you shortly.
+    </p>
+    <p>Here are the details of your enquiry for your records:</p>
+
+    <p>
+      <strong>Email:</strong>
+      <%= @enquiry.email %>
+    </p>
+
+    <p>
+      <strong>Name:</strong>
+      <%= @enquiry.name %>
+    </p>
+
+    <p>
+      <strong>Message:</strong>
+      <%= @enquiry.message %>
+    </p>
+
+    <p>
+      <strong>Phone:</strong>
+      <%= @enquiry.phone %>
+    </p>
+
+    <p>
+      <strong>Enquiry type:</strong>
+      <%= @enquiry.enquiry_type %>
+    </p>
+</div>
