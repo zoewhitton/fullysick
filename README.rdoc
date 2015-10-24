@@ -2,6 +2,8 @@
 
 Hello - welcome to this app! I would like a cat. A really nice one. Mew mew mew!
 
+Merge conflict! Mew mew cat fight!
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
